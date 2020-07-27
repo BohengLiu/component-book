@@ -7,12 +7,14 @@ interface VLProps<T> extends React.HTMLAttributes<HTMLUListElement> {
 
 class VirtualList<T> extends React.Component<VLProps<T>, {}> {
   render() {
-    const { data, renderItem} = this.props;
+    const { data, renderItem } = this.props;
     return (
       <ul>
-        {data.map(item => <li>{renderItem(item)}</li>)}
+        {data.map((item) => (
+          <li>{renderItem(item)}</li>
+        ))}
       </ul>
-    )
+    );
   }
 }
 
